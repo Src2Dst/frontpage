@@ -1,0 +1,111 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html;charset=utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+		<title>
+			css学习记录
+		</title>
+		<style type="text/css">
+		.fancy {
+			color: #f60;
+			background: #666;
+		}
+
+		#intro {
+			font-weight: bold;
+		}
+		
+		[title=BlueBorder] {
+			border:5px solid blue;
+		}
+		
+		span p {
+			font-style: italic;
+			font-weight: bold;
+		}
+		
+		#box {
+			background: grey;
+			width: 100px;
+			height: 100px;
+			margin: 10px;
+			padding: 5px;
+		}
+		</style>
+	</head>
+	
+	<body>
+		<!-- css加载 -->
+		<div>
+			css加载的方式有三种:
+			<ol>
+			<li>内联样式：单个标签中编写</li>
+			<li>内部样式表：head中统一编写</li>
+			<li>外部样式表：单独的css文件中编写，head中引用</li>
+			</ol>
+			本学习记录中使用内部样式表方式
+		</div>
+		<hr>
+		<!-- css选择器 -->
+		<div>
+			常用的选择器有：
+			<ol>
+			<li>类选择器</li>
+			<li>id选择器</li>
+			<li>属性选择器</li>
+			<li>层级选择器/派生选择器</li>
+			</ol>
+			设置了一个fancy的类选择器，效果是改变颜色<br>
+			<p class="fancy">带有类选择器的p标签</p>
+			设置了一个intro的id选择器，效果是使用粗体<br>
+			<p id="intro">带有id选择器的p标签</p>
+			设置了一个BlueBorder的属性选择器，效果是加蓝框<br>
+			<p title="BlueBorder">带有属性选择器的p标签</p>
+			派生选择器是CSS2的命名，设置了span p的派生
+			<span><p>只有span标签中的p标签会被定义字体</p></span>
+			并列结构，使用逗号分隔
+			<p>仅作为对比</p>
+		</div>
+		<hr>
+		<!-- 模式边框 -->
+		<div>
+			<p>css的框模型包含：元素，内外边距，边框</p>
+			<div id="box">
+				使用chrome调试可以看到这个正方形框的组成
+			</div>
+		</div>
+		<hr>
+		<!-- display属性 -->
+		<div>
+		<p id="intro">display属性可以认为是元属性，下面使用display隐藏了一行</p>
+		<p style="display:none">display属性可以认为是元属性</p>
+		</div>
+		<hr>
+		<!-- 鼠标样式cursor -->
+		<div>
+			<p>下面是一些常用鼠标样式，移动鼠标查看</p>
+			<div style="cursor:default">Default</div>
+			<div style="cursor:pointer">Pointer</div>
+			<div style="cursor:move">Move</div>
+			<div style="cursor:text">text</div>
+			<div style="cursor:wait">wait</div>
+			<div style="cursor:help">help</div>
+		</div>
+		<hr>
+		<!-- css浮动 -->
+		<div>
+			<p>下面利用浮动来划分div</p>
+			<div style="border:1px; sloid red">
+				<div style="width:20%">
+					111
+				</div>
+				<div style="width:80% float:right">
+					<p>This is some text. This is some text. This is some text.
+						This is some text. This is some text. This is some text.
+					</p>
+				</div>
+			</div>
+		</div>
+	</body>
+</html>
