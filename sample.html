@@ -1,21 +1,212 @@
 <!DOCTYPE HTML>
 <html>
 	<head>
+		<meta http-equiv="Content-Type" content="text/html;charset=utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
 		<title>
 			这是我定义的标题
 		</title>
 	</head>
+	
 	<body>
-		<h1>这是一个h1标签</h1>
-		<h2>这是一个h2标签</h2>
-		<p>这是一个p标签</p>
-		<p>这是一个p标签&nbsp带一个空格</p>
-		<p>这是一个p标签，</br>带一个换行</p>
-		<p style="background-color:green">定义了绿色背景</p>
-		<div style="background-color:red">使用div</div>
-		<span style="background-color:grey">使用span</span>
-		<span style="font-family:arial;color:red;font-size:20px;">span会向右堆叠，直到占满一行，正如所见，字体和大小也可以定义</span>
+		<!-- 标签 -->
+		<div>
+			<h1>这是一个h1标签</h1>
+			<h2>这是一个h2标签</h2>
+			<p>这是一个p标签</p>
+			<p>这是一个p标签&nbsp带一个空格</p>
+			<p>这是一个p标签，</br>带一个换行</p>
+		</div>
+		<hr>
+		<!-- span与div的区别  style属性 -->
+		<div>
+			<p style="background-color:green">定义了绿色背景</p>
+			<div style="background-color:red">使用div</div>
+			<span style="background-color:grey">使用span</span>
+			<span style="font-family:arial;color:red;font-size:20px;">span会向右堆叠，直到占满一行，正如所见，字体和大小也可以定义</span>
+		</div>
+		<hr>
+		<!-- 选择框 -->
+		<div>
 		
-		
+			普通选择框:
+			<select>
+				<option value ="volvo">Volvo</option>
+				<option value ="saab">Saab</option>
+				<option value="opel">Opel</option>
+				<option value="audi">Audi</option>
+			</select>
+			</br>
+			带默认选项的选择框：
+			<select>
+				<option value ="volvo">Volvo</option>
+				<option value ="saab">Saab</option>
+				<option value="opel">Opel</option>
+				<option value="audi" selected="selected">Audi</option>
+			</select>
+			</br>
+			复选框：
+			<select multiple="multiple" size="3">
+				<option value ="volvo">Volvo</option>
+				<option value ="saab">Saab</option>
+				<option value="opel">Opel</option>
+				<option value="audi">Audi</option>
+			</select>
+			</br>
+			带默认选项的复选框：
+			<select multiple="multiple">
+				<option value ="volvo">Volvo</option>
+				<option value ="saab">Saab</option>
+				<option value="opel" selected="selected">Opel</option>
+				<option value="audi">Audi</option>
+			</select>
+		</div>
+		<hr>
+		<!-- 输入框 -->
+		<div>
+			First name:<br>
+			<input type="text" name="firstname" value="Mickey">
+			<br>
+			Last name:<br>
+			<input type="text" name="lastname" value="Mouse">
+			<br>
+			特殊的密码输入框，不显示数字:<br>
+			<input type="password" name="password" value="foo">
+			<br>
+			
+			提交按钮也是input标签，会自动提交form<br>
+			<input type="submit" value="Submit">
+			<br>
+			也可以是button，需要关联js事件<br>
+			<input type="button" value="submit">
+			<br>
+			
+			点选:最喜欢的水果?<br>
+			<input name="Fruit" type="radio" value="" />苹果
+			<input name="Fruit" type="radio" value="" />桃子
+			<input name="Fruit" type="radio" value="" />香蕉
+			<input name="Fruit" type="radio" value="" />其他
+			<br>
+			复选:喜欢的水果?<br>
+			<input name="Fruit" type="checkbox" value="" />苹果
+			<input name="Fruit" type="checkbox" value="" />桃子
+			<input name="Fruit" type="checkbox" value="" />香蕉
+			<br>
+			选择文件<br>
+			<input name="file" type="file"/>
+			<br>
+			
+			这是textarea标签，更多的文字输入:<br>
+			<textarea rows="3" cols="80">
+			默认测试文字，这里定义了3行，每行宽度80，还可以有更多设置
+			</textarea>
+			<br>
+			
+			label标签改善了鼠标使用体验:点击文字即可点选<br>
+			<form>
+				<label for="male">Male</label>
+				<input type="radio" name="sex" id="male" />
+				<br />
+				<label for="female">Female</label>
+				<input type="radio" name="sex" id="female" />
+			</form>
+		</div>
+		<hr>
+		<!-- 列表，表格 -->
+		<div>
+			无序列表，加了点
+			<ul>
+			<li>Coffee</li>
+			<li>Milk</li>
+			</ul>
+			
+			有序列表，加数字
+			<ol>
+			<li>Coffee</li>
+			<li>Milk</li>
+			</ol>
+			
+			自定义列表
+			<dl>
+			<dt>Coffee</dt>
+			<dd>Black hot drink</dd>
+			<dt>Milk</dt>
+			<dd>White cold drink</dd>
+			</dl>
+			
+			<hr>
+			
+			下面是表格<br>
+			首先是加了边框的简单表格
+			<table border="1">
+			  <tr>
+				<th>Num</th>
+				<th>Name</th>
+				<th>Addrs</th>
+			  </tr>
+			  <tr>
+				<td>001</td>
+				<td>Dennis Ritchie</td>
+				<td>MIT</td>
+			  </tr>
+			  <tr>
+				<td>002</td>
+				<td>Richard Stallman</td>
+				<td>CID</td>
+			  </tr>
+			  <tr>
+				<td>003</td>
+				<td>Linus Torvalds</td>
+				<td>TSCU</td>
+			  </tr>
+			</table>
+			各种合并的表格
+			<table border="1">
+			  <tr>
+				<th>Num</th>
+				<th>Name</th>
+				<th>Addrs</th>
+			  </tr>
+			  <tr>
+				<td>001</td>
+				<td colspan="2">0011</td>
+			  </tr>
+			  <tr>
+				<td rowspan="2">002</td>
+				<td>0021</td>
+				<td>0022</td>
+			  </tr>
+			  <tr>
+				<td>0031</td>
+				<td>0032</td>
+			  </tr>
+			</table>
+		</div>
+		<hr>
+		<!-- fieldset -->
+		<div>
+			fieldset标签可以对表单内元素分组
+			<form>
+			  <fieldset>
+				<legend>健康信息</legend>
+				身高：<input type="text" />
+				体重：<input type="text" />
+			  </fieldset>
+			</form>
+		<p>如果表单周围没有边框，说明您的浏览器太老了。</p>
+		</div>
+		<hr>
+		<!-- form -->
+		<div>
+			form创建表单，便于提交数据<br>
+			action指定了数据提交给谁<br>
+			method指定了提交的方法，参考restful及约定
+			<form action="form_action.asp" method="get">
+			  <p>First name: <input type="text" name="fname" /></p>
+			  <p>Last name: <input type="text" name="lname" /></p>
+			  <input type="submit" value="Submit" />
+			</form>
+		</div>
+		<hr>
 	</body>
 </html>
