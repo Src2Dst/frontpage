@@ -69,16 +69,16 @@
 		</div>
 		<hr>
 		<!-- 模式边框 -->
-		<div>
+		<div style="height:200px;width:200px;">
 			<p>css的框模型包含：元素，内外边距，边框</p>
-			<div id="box">
+			<div style="background-color:grey; width:100px; height:100px; margin:0px; padding:0px; margin-left:50px;">
 				使用chrome调试可以看到这个正方形框的组成
 			</div>
 		</div>
 		<hr>
 		<!-- display属性 -->
 		<div>
-		<p id="intro">display属性可以认为是元属性，下面使用display隐藏了一行</p>
+		<p id="intro">display属性可以认为是元属性，常用属性值：none, block, inline，下面使用display隐藏了一行</p>
 		<p style="display:none">display属性可以认为是元属性</p>
 		</div>
 		<hr>
@@ -94,18 +94,30 @@
 		</div>
 		<hr>
 		<!-- css浮动 -->
-		<div>
-			<p>下面利用浮动来划分div</p>
-			<div style="border:1px; sloid red">
-				<div style="width:20%">
-					111
+		<div style="background-color:grey;">
+			<p>下面使用浮动，浮动会打破父类的格式定义，解决方法：使用clearfix</p>
+			<div style="border:1px; sloid;">
+				<div style="width:20%;float:left;background-color:#00d0ff;">
+					<p>This is some menu.This is some menu.This is some menu.This is some menu.</p>
 				</div>
-				<div style="width:80% float:right">
-					<p>This is some text. This is some text. This is some text.
-						This is some text. This is some text. This is some text.
+				<div style="width:80%;float:right;background-color:yellow;">
+					<p>This is some text. This is some text. This is some text.This is some text. This is some text. This is some text.
 					</p>
 				</div>
+				
+				<div style="clear:both;"></div>
+				
 			</div>
+		</div>
+		<hr>
+		<!-- position属性 -->
+		<div>
+			position常用属性：fixed, relative, absolute
+			<ol>
+			<li>fixed锁定块位置</li>
+			<li>relative定义子块以父块大小做参照</li>
+			<li>absolute定义字块以整个屏幕大小做参照</li>
+			</ol>
 		</div>
 	</body>
 </html>
