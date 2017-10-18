@@ -92,14 +92,11 @@
 		</div>
 		<hr>
 		
-		
+		<input type="text" class="gray" id="joke" value=" 这是一个调皮的滚动播放条!" onfocus="func();" />
 		<script type="text/javascript">
 			function Enter() {
-				
 				var id = document.getElementById("tip");
-				
 				id.className = 'black';
-				
 				if(id.Value=="请输入关键字" || id.value.trim()=="") {
 					ia.value = ''
 				}
@@ -117,16 +114,15 @@
 				}
 			}
 			
-			/*
 			function func() {
 				var id = document.getElementById("joke");
 				var s = id.value.split("");
 				s.push(s[0]);
 				s.shift();
 				id.value = s.join("");
-				setInterval(func,1000);
 			}
-			*/
+			setInterval(func,500);
+			
 		</script>
 	</body>
 </html>
