@@ -1,0 +1,132 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html;charset=utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+		<title>
+			js学习记录
+		</title>
+		<style type="text/css">
+		.black { color:black; }
+		.gray { color:gray; }
+		.yh_b {  font:bold 15px/1.5em "Microsoft YaHei" }
+		</style>
+	</head>
+	
+	<body>
+		<!-- 前端重温 -->
+		<div class="yh_b">
+			<p>前端知识范畴</p>
+			<ol>
+			<li>html：骨架</li>
+			<li>div+css：皮肤/衣服</li>
+			<li>JavaScript：动态响应</li>
+			<li>DOM：文档对象（树结构）</li>
+			<li>JQuery：JS+DOM的封装，减少重复代码</li>
+			</ol>
+		</div>
+		<hr>
+		
+		<!-- JavaScript相关 -->
+		<div class="yh_b">
+			<p>JS引用的两种方法：类似css，不再赘述</p>
+			<p>为什么JS的标签要放在body尾部？</p>
+			<p>中文乱码解决方法：1.设置html文件为utf8；2.设置页面meta中的charset为utf8</p>
+			<p>注释的格式：
+			<ol>
+			<li>单行注释：//</li>
+			<li>多行注释：/* */</li>
+			</ol>
+			</p>
+			<p>全局变量和局部变量var</p>
+			<p>默认参数和自构建</p>
+			<p>匿名函数和自执行函数</p>
+			<p>使用浏览器和console函数调试</p>
+			<p>总结：JS的代码风格类似C；编译型语言</p>
+		</div>
+		<hr>
+		
+		<!-- JS常用函数 -->
+		<div class="yh_b">
+			<p>字符串常用方法：trim, Charat, substring, length</p>
+			<p>数组与数组方法：push, unshift, splice, pop, shift, slice, concat</p>
+			<p>for循环的两种方式：key索引与下标索引</p>
+		</div>
+		<hr>
+
+		<!-- JS与DOM对象 -->
+		<div class="yh_b">
+			<p>Form表单提交，事件</p>
+			<p>DOM会在树中查找节点</p>
+			<a href="http://www.techbrood.com/jsref?p=dom-obj-document" target="blank">参考资料：JS与DOM参考手册</a>
+		
+		<!-- Js定时器 -->
+
+			<p>定时器涉及到四个方法：</p>
+			<ol>
+			<li>setInterval()</li>
+			<li>clearInterval()</li>
+			<li>setTimeout()</li>
+			<li>clearTimeout()</li>
+			</ol>
+			<a href="http://www.jb51.net/shouce/htmldom/jb51.net.htmldom/htmldom/dom_obj_window.asp.html" target="blank">更多DOM对象</a>
+		</div>
+		<hr>
+		
+		<!-- DOM，JS完成的搜索框示例 -->
+		<div class="yh_b">
+		<p>下面是DOM配合JS完成的搜索框示例</p>
+		<input type="text" class="gray" id="tip" value="请输入关键字" onfocus="Enter();" onblur="Leave();"/>
+		</div>
+		<hr>
+		
+		<!-- JQuery -->
+		<div class="yh_b">
+			<a href="http://hemin.cn/jq/" target="blank">JQuery参考手册</a>
+			<p>重点关注：属性/CSS/选择器/文档处理/事件</p>
+			<p>前端资源</p>
+				<a href="http://v3.bootcss.com/components/#nav" target="blank">Bootstrap</a>
+				<a href="http://www.jeasyui.net/plugins/" target="blank">Easy UI</a>
+				<a href="https://adminlte.io/" target="blank">meAdmin</a>
+				<a href="http://fontawesome.io/" target="blank">Font Awesome</a>
+		</div>
+		<hr>
+		
+		
+		<script type="text/javascript">
+			function Enter() {
+				
+				var id = document.getElementById("tip");
+				
+				id.className = 'black';
+				
+				if(id.Value=="请输入关键字" || id.value.trim()=="") {
+					ia.value = ''
+				}
+			}
+			
+			function Leave() {
+				var id = document.getElementById("tip");
+				var val = id.value;
+				if(val.length==0 || id.value.trim()=="") {
+					id.value = "请输入关键字";
+					id.className = "gray";
+				}else{
+					id.className = "black";
+					
+				}
+			}
+			
+			/*
+			function func() {
+				var id = document.getElementById("joke");
+				var s = id.value.split("");
+				s.push(s[0]);
+				s.shift();
+				id.value = s.join("");
+				setInterval(func,1000);
+			}
+			*/
+		</script>
+	</body>
+</html>
